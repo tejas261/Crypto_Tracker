@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+input{
+  border: 1px solid black;
+}
+html{
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: auto;
+  height: auto;
+  max-width: 1250px;
+}
+i {
+  padding: 15px;
+}
+
+
+h4 {
+  color: #333;
+  font-weight: 600;
+  display: none;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 1px solid #4c4c4c;
+  margin: 10px 8px;
+}
+
+.container {
+  height: 50vh;
+  width: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: width 1s ease;
+}
+
+.sidebar .user-account {
+  display: flex;
+  align-items: center;
+  padding: 40px 10px 20px 10px;
+  color: #000;
+}
+
+.user-account img {
+  height: 45px;
+  border-radius: 50%;
+}
+
+.user-account h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.links {
+  list-style: none;
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: calc(100% - 140px);
+}
+
+.links li {
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  transition: 1s ease;
+}
+
+.links span {
+  padding: 12px 10px;
+}
+.links li a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  white-space: nowrap;
+  display: block;
+}
+
+.links li:hover {
+  background-color: rgba(96, 108, 110, 0.6);
+  transition: 0.6s ease;
+}
+
+.links::-webkit-scrollbar {
+  display: none;
+}
+
+.home {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+}
+
