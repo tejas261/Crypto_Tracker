@@ -7,7 +7,7 @@ function Cryptocurrencies() {
   const [coinID, setCoinID] = useState([]);
   const [coinname, setCoinname] = useState("");
   const [arr, setArr] = useState([]);
-  var i = 0;
+  var i = -1;
   const color = ["blue","green","yellow","gray","slate","amber","purple","pink"]
 
 
