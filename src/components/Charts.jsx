@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 
 function Charts() {
   const { id } = useParams();
-    console.log(id);
   const chartProps = {
     width: 1500,
     height: 700,
@@ -40,7 +39,6 @@ function Charts() {
               close: arrItems[4],
             };
           });
-        console.log(cdata);
         candlesticks.setData(cdata);
         chart.timeScale().fitContent();
       } catch (error) {

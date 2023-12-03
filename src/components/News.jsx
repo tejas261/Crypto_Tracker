@@ -10,8 +10,9 @@ function News() {
     try {
       setLoading(true);
       const response = await axios.request(import.meta.env.VITE_KEY2);
-      const data = response.data.data;
-      setNewsData(data.slice(0,10));
+      const data = response.data.results;
+      console.log(data);
+      setNewsData(data.slice(0,20));
       setLoading(false);
     } catch (error) {
       console.error(error);
@@ -37,46 +38,12 @@ function News() {
               <span className="w-[60%] font-bold">
                 <a target="_blank" href={arrItems.url}><h1>{arrItems.title}</h1></a>
               </span>
-              <span className="w-[10%] h-[20%] rounded-3xl">
-                <img width={100} height={100} src={arrItems.image_url} alt="img" />
-              </span>
             </div>
-            <p>{arrItems.description}</p>
-            <p className="font-bold">{new Date().getUTCHours()- arrItems.published_at.slice(11,12)-0} hours ago</p>
+            <p className="font-bold">{new Date(arrItems.published_at).toLocaleString(undefined, {timeZone: 'Asia/Kolkata'})}</p>
           </div>
           </div>
         ))
-      )} 
-
-          {/* <div className="absolute right-36 p-5 bg-red-400 h-auto w-[20%] ">
-            <div className="p-2 ml-20 text-xl font-bold italic">
-             <img src="" alt="" /> 
-             <h2>BTC</h2> 
-            </div><hr />
-            
-            <div  className="p-2 ml-20 text-xl font-bold italic">
-             <img src="" alt="" /> 
-             <h2>ETH</h2>
-            </div>
-
-            <div  className="p-2 ml-20 text-xl font-bold italic">
-             <img src="" alt="" /> 
-             <h2>XRP</h2>
-            </div>
-
-            <div  className="p-2 ml-20 text-xl font-bold italic">
-             <img src="" alt="" /> 
-             <h2>DOT</h2>
-            </div>
-
-            <div  className="p-2 ml-20 text-xl font-bold italic">
-             <img src="" alt="" /> 
-             <h2>TRON</h2>
-            </div>
-          </div> */}
-
-         
-
+      )}       
     </>
   );
 }

@@ -8,8 +8,8 @@ import { useState, createContext, useEffect } from "react";
 
 import Cryptocurrencies from "./components/Cryptocurrencies";
 import Charts from "./components/Charts";
-import Dummy from "./components/Dummy";
 export const Appcontext = createContext();
+
 
 function App() {
   return (
@@ -23,7 +23,6 @@ function App() {
         <Route path="/cryptos" element={<Cryptocurrencies />} />
         <Route path="/cryptos/:id" element={<Charts />} />
         <Route path="/charts" element={<Charts />} />
-        <Route path="/dummy" element={<Dummy />} />
         <Route path="*" element={<h1>PAGE NOT FOUND!!!</h1>} />
       </Routes>
     </>
